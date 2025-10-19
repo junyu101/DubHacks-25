@@ -10,16 +10,7 @@ const PORT = process.env.PORT || 3001;
 
 // Allow frontend to access backend
 app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "http://127.0.0.1:5173",
-      "https://dub-hacks-25.vercel.app/", // your Vercel site URL
-      "dub-hacks-25-mxm55b7tt-junyu101s-projects.vercel.app"
-    ],
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"]
-  })
+  cors()
 );
 
 app.use(express.json());
